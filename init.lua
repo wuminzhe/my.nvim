@@ -190,11 +190,11 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- keymaps by aki
+-- keymaps by AKI
+-- paste multiple times
 vim.keymap.set('x', 'p', 'pgvy', { desc = 'Paste multiple times' })
-
--- set '-' in normal mode to go to the netrw file explorer(call Rex)
-vim.keymap.set('n', '-', '<cmd>Rex<CR>', { desc = 'Open netrw file explorer' })
+-- -- set '-' in normal mode to go to the netrw file explorer(call Rex)
+-- vim.keymap.set('n', '-', '<cmd>Rex<CR>', { desc = 'Open netrw file explorer' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
