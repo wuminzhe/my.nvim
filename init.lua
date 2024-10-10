@@ -110,6 +110,21 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- my linux is wayland, so set clipboard to wl-clipboard
+if vim.fn.getenv 'WAYLAND_DISPLAY' ~= nil then
+  vim.g.clipboard = {
+    name = 'wl-clipboard',
+    copy = {
+      ['+'] = { 'wl-copy', '--trim-newline' },
+      ['*'] = { 'wl-copy', '--trim-newline' },
+    },
+    paste = {
+      ['+'] = { 'wl-paste', '--no-newline' },
+      ['*'] = { 'wl-paste', '--no-newline' },
+    },
+  }
+end
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
