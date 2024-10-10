@@ -2,11 +2,13 @@ return {
   'yetone/avante.nvim',
   event = 'VeryLazy',
   lazy = false,
+  version = false,
   opts = {
     provider = 'copilot',
   },
   build = ':AvanteBuild', -- This is optional, recommended tho. Also note that this will block the startup for a bit since we are compiling bindings in Rust.
   dependencies = {
+    'nvim-treesitter/nvim-treesitter',
     'stevearc/dressing.nvim',
     'nvim-lua/plenary.nvim',
     'MunifTanjim/nui.nvim',
