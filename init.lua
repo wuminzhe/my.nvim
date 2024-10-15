@@ -115,8 +115,8 @@ if vim.fn.getenv 'WAYLAND_DISPLAY' ~= nil then
   vim.g.clipboard = {
     name = 'wl-clipboard',
     copy = {
-      ['+'] = { 'wl-copy', '--trim-newline' },
-      ['*'] = { 'wl-copy', '--trim-newline' },
+      ['+'] = { 'wl-copy' },
+      ['*'] = { 'wl-copy' },
     },
     paste = {
       ['+'] = { 'wl-paste', '--no-newline' },
